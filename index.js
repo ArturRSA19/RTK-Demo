@@ -6,7 +6,7 @@ const fetchUsers = require('./features/user/userSlice').fetchUsers
 console.log('Estado inicial: ', store.getState())
 const unsubscribe = store.subscribe(() => {})
 
-store.dispatch(fetchUsers())
+// store.dispatch(fetchUsers())
 
 // store.dispatch(cakeActions.ordered())
 // store.dispatch(cakeActions.ordered())
@@ -18,5 +18,8 @@ store.dispatch(fetchUsers())
 // store.dispatch(iceCreamActions.restocked(20))
 // store.dispatch(cakeActions.ordered())
 
-// unsubscribe()
+store.dispatch(cakeActions.ordered()) // Testando a soda
+store.dispatch(iceCreamActions.ordered(4)) // Testando a soda
+
+unsubscribe()
 
